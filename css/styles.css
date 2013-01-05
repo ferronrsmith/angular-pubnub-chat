@@ -1,0 +1,67 @@
+/*@import "theme.css";*/
+
+#friendPic {
+	float: left;
+	padding-right: 10px;
+	padding-bottom: 16px;
+}
+
+#friendDetails p {
+	margin-top: 0;
+	margin-bottom: 8px;
+}
+
+#actionList {
+	clear: both;
+}
+
+.msgContainerDiv {
+    overflow-y: scroll;
+    height: 250px;
+}
+
+.message {
+    padding: 5px 5px 5px 5px;
+}
+.username {
+    font-weight: bold;
+    color: #0f0;
+}
+
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}
+
+#messageText {
+    height: 50px !important;
+    overflow: hidden;
+    resize: none;
+}
+
+.invalidUser {
+    margin-left: 50%;
+    color: #E33100;
+}
+
+.css-form input.ng-invalid.ng-dirty {
+    background-color: #fad1cf;
+}
+
+.css-form input.ng-valid.ng-dirty {
+    background-color: #dbfac6;
+}
+
+.emoticonimg {
+    width: 20px;
+    height: 20px;
+}
+
+#servercheck-username, #servercheck-email {
+    color: #fa7261;
+    margin-left: 22%;
+}
+
+#status-message {
+    font-style: italic;
+
+}

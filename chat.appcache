@@ -1,0 +1,34 @@
+CACHE MANIFEST
+# 2010-06-18:v2
+
+# Explicitly cached 'master entries'.
+CACHE:
+http://ferronrsmith.pythonanywhere.com/static/img/users/amy_jones.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/eugene_lee.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/ferron_smith.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/gary_donovan.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/james_king.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/john_williams.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/julie_taylor.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/kathleen_byrne.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/lisa_wong.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/man_icon.png
+http://ferronrsmith.pythonanywhere.com/static/img/users/paul_jones.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/paula_gates.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/ray_moore.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/steven_wells.jpg
+http://ferronrsmith.pythonanywhere.com/static/img/users/woman_icon.png
+
+# Resources that require the user to be online.
+NETWORK:
+chat.html
+frienddetails.html
+login.html
+main.html
+register.html
+
+# static.html will be served if main.py is inaccessible
+# offline.jpg will be served in place of all images in images/large/
+# offline.html will be served in place of all other .html files
+FALLBACK:
+*.html /welcome.html

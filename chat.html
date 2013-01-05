@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+<html ng-app="dbchat">
+<head>
+    <title>Chat Console</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body ng-controller="ChatCtrl" ng-init="subscribe()">
+
+<div id="registerPage" data-role="page">
+
+    <div data-role="header" data-position="fixed">
+        <a href="main.html" data-icon="home" data-ajax="false">Home</a>
+
+        <h1>Chat Console</h1>
+        <a data-icon="alert" ng-click="signout()">Sign Out</a>
+    </div>
+    <div data-role="content">
+        <!--
+            <div class="ui-body">
+                <fieldset class="ui-grid-a">
+                    <div class="ui-block-a">
+                        <textarea name="textarea" id="textarea"></textarea>
+                    </div>
+                    <div class="ui-block-b" data-mini="true">
+                        <button type="submit" data-theme="a" data-inline="true">Send</button>
+                        <button type="submit" data-theme="d" data-inline="true">Cancel</button>
+                    </div>
+                </fieldset>
+            </div> -->
+        <div id="textarea" name="textarea" class="msgContainerDiv"></div>
+        <label for="messageText"><strong>Message:</strong></label>
+        <textarea id="messageText" key-press="sendMessage"></textarea>
+        <fieldset class="ui-grid-a">
+            <div class="ui-block-a">
+                <button data-theme="a" id="chatSendButton" name="chatSendButton" ng-click="sendMessage()">Send</button>
+            </div>
+            <div class="ui-block-b"><a id="goBackButton" data-role="button" ng-click="back()">Go Back</a></div>
+        </fieldset>
+
+    </div>
+
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jquery.mobile.min.js"></script>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-resource.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/lib/pubnub.js"></script>
+
+</body>
+</html>

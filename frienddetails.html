@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html ng-app="dbchat">
+<head>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body ng-controller="FriendDetailsCtrl">
+
+<div id="detailsPage" data-role="page">
+
+    <div data-role="header">
+        <a data-icon="back" ng-click="back()">Back</a>
+
+        <h1>User Details</h1>
+
+        <a data-icon="alert" ng-click="signout()">Sign Out</a>
+    </div>
+
+    <div data-role="content" ng-cloak>
+        <img id="friendPic" src=""/>
+
+        <div id="friendDetails">
+            <h3 id="fullName"> {{ user.firstName }}&nbsp;{{ user.lastName }}</h3>
+
+            <p id="city">{{ user.city }}</p>
+        </div>
+
+        <ul id="actionList" data-role="listview" data-inset="true">
+            <li id="email">
+                <a href="mailto: {{ user.email }}"><h3>Email</h3>
+
+                    <p ng-model="userEmail">{{ user.email }}</p>
+                </a>
+            </li>
+            <li id="cPhone">
+                <a href="tel: {{ user.cellPhone }}"><h3>Call Cell</h3>
+
+                    <p>{{ user.cellPhone }}</p>
+                </a>
+            </li>
+            <li id="sPhone">
+                <a href="sms: {{ user.cellPhone }}"><h3>SMS</h3>
+
+                    <p>{{ user.cellPhone }}</p>
+                </a>
+            </li>
+            <li id="changePass" show-currentuser="{{ user.username == currentUser.username }}">
+                <a href="password.html" data-ajax="false"><h3>Change Password</h3></a>
+            </li>
+        </ul>
+
+    </div>
+
+</div>
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jquery.mobile.min.js"></script>
+<!-- <script src="js/friendslist.js"></script>
+<script src="js/frienddetails.js"></script> -->
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-resource.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/directives.js"></script>
+<script src="js/controllers.js"></script>
+</body>
+
+
+</html>

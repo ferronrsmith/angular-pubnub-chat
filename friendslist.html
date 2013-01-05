@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html ng-app="dbchat" manifest="chat.appcache">
+<head>
+    <title>Contact List</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css"/>
+    <link rel="stylesheet" href="css/styles.css"/>
+</head>
+
+<body ng-controller="FriendListCtrl">
+
+<div id="employeeListPage" data-role="page" data-add-back-btn="true">
+
+    <div data-role="header" data-position="fixed">
+        <a href="main.html" data-icon="home" data-ajax="false">Home</a>
+
+        <h1>Contact List</h1>
+        <a data-icon="alert" ng-click="signout()">Sign Out</a>
+
+    </div>
+
+    <div data-role="content" ng-cloak>
+        <ul id="friendsList" data-role="listview" data-filter="true" data-filter-placeholder="Search contacts...">
+            <li ng-repeat="user in users | orderBy:orderProp">
+                <a href="frienddetails.html?id={{ user.id }}" rel="external">
+                    <img src="" img-path>
+                    <h4> {{ user.firstname }}&nbsp;{{ user.lastname }} </h4>
+
+                    <p> {{ user.title }} </p>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+<script src="js/lib/jquery.min.js"></script>
+<script src="js/lib/jquery.mobile.min.js"></script>
+<script src="js/lib/angular.min.js"></script>
+<script src="js/lib/angular-resource.min.js"></script>
+<script src="js/app.js"></script>
+<script src="js/services.js"></script>
+<script src="js/controllers.js"></script>
+<script src="js/directives.js"></script>
+</body>
+
+</html>
