@@ -1,3 +1,5 @@
+/*global $, angular,window, PUBNUB */
+
 function UserCtrl($scope, $log, CurrentUser, settingsStorage, errorHandler) {
     "use strict";
     // code for current user goes here

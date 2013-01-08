@@ -3,6 +3,10 @@
  *
  * @type {angular.Module}
  */
+
+/*global $, angular, navigator,window */
+/*jslint bitwise: true */
+
 var dbchat = angular.module('dbchat', ['userServices', 'loginServices', 'localStorage', 'localDbStorage', 'errorHandler', 'chatUtilService', 'RegistrationServices', 'PasswordService']);
 
 dbchat.run(function ($rootScope, $window, $log, settingsStorage, dbStorage) {

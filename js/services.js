@@ -3,6 +3,10 @@
  * Time: 4:29 AM
  */
 
+
+/*global $, PUBNUB, angular, INVALID_STATE_ERR, navigator, dbchat, setTimeout, clearTimeout, window, localStorage */
+/*jslint bitwise: true */
+
 angular.module('localDbStorage', ['localStorage']).
     factory('dbStorage', function ($http, $log, $rootScope, settingsStorage) {
         "use strict";
@@ -69,7 +73,7 @@ angular.module('localDbStorage', ['localStorage']).
                 // record the max id we're running against so other calls can move beyond it
                 dbApp.maxSynchedQueueId = rQueueRecords.rows.item(0).QueueId;
 
-                for (i = 0; i < queueLength; i++) {
+                for (i = 0; i < queueLength; i += 1) {
 
                     sJsonObject = {
                         mobileQueueId: rQueueRecords.rows.item(i).QueueId,
@@ -470,7 +474,7 @@ angular.module('errorHandler', []).
                 if ($constructor.$invalid) {
                     var $reqErrs = $constructor.$error.required, errCount = $reqErrs.length, i;
                     $log.error(errCount + " invalid fields detected");
-                    for (i = 0; i < errCount; i++) {
+                    for (i = 0; i < errCount; i += 1) {
                         $log.error("missing field : " + $reqErrs[i].$name);
                     }
                 } else {
@@ -494,7 +498,7 @@ angular.module('chatUtilService', []).
                 var vars = [], hash, $href, hashes, i;
                 $href = window.location.href;
                 hashes = $href.slice($href.indexOf('?') + 1).split('&');
-                for (i = 0; i < hashes.length; i++) {
+                for (i = 0; i < hashes.length; i += 1) {
                     hash = hashes[i].split('=');
                     vars.push(hash[0]);
                     vars[hash[0]] = hash[1];
@@ -534,7 +538,7 @@ angular.module('chatUtilService', []).
                  */
                 for (emoticon in emotes) {
                     if (emotes.hasOwnProperty(emoticon)) {
-                        for (i = 0; i < emotes[emoticon].length; i++) {
+                        for (i = 0; i < emotes[emoticon].length; i += 1) {
                             /* css class of images is emoticon img for styling them */
                             html = html.replace(emotes[emoticon][i], "<img src=\"" + icon_folder + "/" + emoticon + ".png\" class=\"emoticonimg\" alt=\"" + emotes[emoticon][i] + "\"/>", "g");
                         }

@@ -4,6 +4,7 @@
  * To change this template use File | Settings | File Templates.
  */
 
+/*global $, angular, navigator,window, dbchat */
 
 dbchat.directive('imgPath', function () {
     "use strict";
